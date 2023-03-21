@@ -1,0 +1,22 @@
+body> p {
+    border-bottom: 2px solid blue;
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.par:before {
+    color: #f00000;
+    content: "Name: ";
+}
+
+.par:after {
+    content: ", ";
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+}
