@@ -1,14 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/app.js" defer></script>
     <title>REST Countries API</title>
 </head>
+
 <body>
+    <header class="header">
+        <nav class="header-nav container">
+            <h1>Where in the world ?</h1>
+            <div class="toggle-mode">
+                <!-- <ion-icon name="moon" aria-hidden="false" aria-label="dark-mode"></ion-icon> -->
+                <ion-icon name="sunny" aria-hidden="false" aria-label="light-mode"></ion-icon>
+                <span>light mode</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="homepage">
+        <section class="container search-and-filter">
+            <ion-icon name="search-sharp"></ion-icon>
+            <input type="text" name="country-input" id="country-input" placeholder="Search for a country...">
+
+            <ul id="filter">
+                <li class="filter-by">
+                    <span>filter by region</span>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </li>
+                <li class="region" value="africa">
+                    <span>africa</span>
+                </li>
+                <li class="region" value="america">
+                    <span>america</span>
+                </li>
+                <li class="region" value="asia">
+                    <span>asia</span>
+                </li>
+                <li class="region" value="europe">
+                    <span>europe</span>
+                </li>
+                <li class="region" value="oceania">
+                    <span>oceania</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main-section container">
+            <!-- <div class="country-card">
+                <div class="card-img">
+                    <img src="https://flagcdn.com/ao.svg" alt="">
+                </div>
+                <div class="card-info">
+                    <h4>germany</h4>
+                    <p>population: 123456</p>
+                    <p>region: asia</p>
+                    <p>capital: hdsvajd</p>
+                </div>
+            </div> -->
+        </section>
+    </section>
+
+    <section class="detailed-page container">
+        <div class="btn-section">
+            <button>
+                <ion-icon name="arrow-back-sharp"></ion-icon>
+                back
+            </button>
+        </div>
+
+        <div class="details-section">
+            <div class="country-flag">
+                <!-- <img src="https://flagcdn.com/ad.svg" alt=""> -->
+            </div>
+            <div class="country-info">
+                <div class="details">
+                    <div class="main-details">
+                        <p class="native-name">native name: </p>
+                        <p class="population">population: </p>
+                        <p class="region">region: </p>
+                        <p class="sub-region">sub region: </p>
+                        <p class="capital">capital: </p>
+                    </div>
+                    <div class="other-details">
+                        <p>top level domain: </p>
+                        <p>currencies: </p>
+                        <p>languages: </p>
+                    </div>
+                </div>
+                <div class="border-countries">
+                    <p>Border Countries: </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

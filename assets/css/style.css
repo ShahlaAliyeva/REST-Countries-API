@@ -1,22 +1,301 @@
-body> p {
-    border-bottom: 2px solid blue;
-    width: 30%;
-    margin-bottom: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.par:before {
-    color: #f00000;
-    content: "Name: ";
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(207, 26%, 17%);
 }
 
-.par:after {
-    content: ", ";
+.container {
+    width: 82%;
+    margin: 0 auto;
 }
 
-img {
-    width: 300px;
-    height: auto;
-    border-style: dashed;
-    border-width: 1px;
-    border-color: black;
+.header {
+    background-color: hsl(209, 23%, 22%);
+    max-width: 100%;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 15px black;
+    height: 4.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.header-nav .toggle-mode {
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: flex;
+    column-gap: .3rem;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 1.2rem;
+}
+
+/* Search and Filter Side */
+
+.search-and-filter {
+    margin: 3rem auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.search-and-filter form {
+    position: relative;
+}
+
+.search-and-filter #country-input {
+    height: 3rem;
+    width: 30rem;
+    left: 0;
+    padding: 1rem 1.5rem 1rem 2.3rem;
+    background-color: hsl(209, 23%, 22%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: .4rem;
+    font-weight: 300;
+}
+
+.search-and-filter #country-input:focus {
+    outline: none;
+}
+
+.search-and-filter #country-input::placeholder {
+    color: hsl(0, 0%, 71%);
+}
+
+.search-and-filter ion-icon[name='search-sharp'] {
+    position: absolute;
+    z-index: 100;
+    color: hsl(0, 0%, 100%);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: .7rem;
+}
+
+.search-and-filter ul#filter {
+    list-style: none;
+    color: hsl(0, 0%, 100%);
+    width: 11.5rem;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+.search-and-filter ul#filter ion-icon {
+    font-size: .8rem;
+}
+
+.search-and-filter ul#filter li {
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(209, 23%, 22%);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.search-and-filter ul#filter .filter-by {
+    height: 3rem;
+    margin-bottom: .4rem;
+    border-radius: .4rem;
+}
+
+.search-and-filter ul#filter li:nth-child(2) {
+    border-radius: .4rem .4rem 0 0;
+}
+
+.search-and-filter ul#filter li:last-child {
+    border-radius: 0 0 .4rem .4rem;
+}
+
+.search-and-filter ul#filter li:not(:first-child) {
+    height: 2.4rem;
+    display: none;
+}
+
+/*Main content section*/
+
+.main-section {
+    display: grid;
+    grid-template-columns: 21% 21% 21% 21%;
+    gap: 4rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+}
+
+.country-card {
+    border-radius: .4rem;
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: 2px 0px 10px hsl(200, 15%, 8%);
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 10rem;
+}
+
+.card-img img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: .4rem .4rem 0 0;
+}
+
+.card-info {
+    padding: 1.5rem 1rem 2rem;
+    color: hsl(0, 0%, 100%);
+    text-transform: capitalize;
+}
+
+.card-info h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.card-info p {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+}
+
+/* Country details page*/
+/* .homepage {
+    display: none;
+} */
+
+.detailed-page {
+    display: none;
+    flex-direction: column;
+    margin: 3rem auto;
+}
+
+.btn-section button {
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .2rem;
+    padding: .4rem 1rem;
+    text-transform: capitalize;
+    box-shadow: 2px 0px 10px hsl(200, 15%, 8%);
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-section button ion-icon {
+    font-size: .9rem;
+}
+
+.details-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.country-flag {
+    width: 50%;
+    height: 30rem;
+}
+
+.country-flag img {
+    object-fit: contain;
+    width: 100%;
+    box-shadow: 2px 0px 10px hsl(200, 15%, 8%);
+}
+
+.country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    width: 40%;
+    color: hsl(0, 0%, 100%);
+}
+
+.country-info h3 {
+    font-size: 2rem;
+}
+
+.country-info p {
+    margin-bottom: .7rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.country-info span {
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.details {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: space-between;
+}
+
+.details .main-details {
+    width: 50%;
+}
+
+.country-info .border-countries {
+    display: flex;
+    align-items: baseline;
+    row-gap: .7rem;
+    flex-wrap: wrap;
+}
+
+.country-info .border-countries p {
+    margin-right: .7rem;
+}
+
+.country-info .border-countries span {
+    background-color: hsl(209, 23%, 22%);
+    display: inline-block;
+    padding: .5rem .7rem;
+    cursor: pointer;
+    box-shadow: 2px 0px 6px hsl(200, 15%, 8%);
+}
+
+.country-info .border-countries span:not(:last-child) {
+    margin-right: .7rem;
+}
+
+.hide {
+    display: none;
 }
