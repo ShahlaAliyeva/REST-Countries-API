@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-    let body = document.querySelector('body')
     let mainSection = document.querySelector('.main-section')
 
     let filter = document.querySelector('.filter-by')
@@ -198,8 +197,8 @@ window.addEventListener('load', function () {
             let visibleCardsArr = document.querySelectorAll('.country-card')
             let inputValue = input.target.value.toLocaleLowerCase()
 
-            if (inputValue.trim() !== '') {
-                console.log(inputValue);
+            // if (inputValue.trim() !== '') {
+            //     console.log(inputValue);
 
                 visibleCardsArr.forEach((cards) => {
                     let visibleCardRegion = cards.lastChild.querySelector('.countryRegion').innerText.split(' ')[1].toLocaleLowerCase()
@@ -221,7 +220,7 @@ window.addEventListener('load', function () {
                     }
                     // cards.classList.toggle('hide', !isVisible)
                 })
-            }
+            // }
 
         })
     }

@@ -285,7 +285,7 @@ ion-icon {
 }
 
 .country-info .border-countries span {
-    background-color: hsl(209, 23%, 22%);
+    /* background-color: hsl(209, 23%, 22%); */
     display: inline-block;
     padding: .5rem .7rem;
     cursor: pointer;
@@ -299,3 +299,4 @@ ion-icon {
 .hide {
     display: none;
 }
+

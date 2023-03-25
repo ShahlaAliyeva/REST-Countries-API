@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/switchMode.js" defer></script>
     <title>REST Countries API</title>
 </head>
 
@@ -21,16 +22,16 @@
         <nav class="header-nav container">
             <h1>Where in the world ?</h1>
             <div class="toggle-mode">
-                <!-- <ion-icon name="moon" aria-hidden="false" aria-label="dark-mode"></ion-icon> -->
-                <ion-icon name="sunny" aria-hidden="false" aria-label="light-mode"></ion-icon>
-                <span>light mode</span>
+                <!-- <ion-icon name="moon" aria-hidden="false" class="moon"></ion-icon> -->
+                <ion-icon name="sunny" aria-hidden="false" class="mode-icon"></ion-icon>
+                <span class="mode-span">light mode</span>
             </div>
         </nav>
     </header>
 
     <section class="homepage">
         <section class="container search-and-filter">
-            <ion-icon name="search-sharp"></ion-icon>
+            <ion-icon name="search-sharp" class="search-icon"></ion-icon>
             <input type="text" name="country-input" id="country-input" placeholder="Search for a country...">
 
             <ul id="filter">
