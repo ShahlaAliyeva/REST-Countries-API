@@ -300,3 +300,139 @@ ion-icon {
     display: none;
 }
 
+@media(max-width: 480px) {
+    .container {
+        width: 92%;
+    }
+
+    .header-nav h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-nav .toggle-mode {
+        font-size: .9rem;
+    }
+
+    .search-and-filter {
+        margin: 2rem auto 6rem;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search-and-filter #country-input {
+        width: 100%;
+    }
+
+    .search-and-filter ul#filter {
+        left: 0;
+        top: 4rem;
+    }
+
+    .search-and-filter ul#filter .filter-by {
+        margin-bottom: .1rem;
+    }
+
+    .main-section {
+        grid-template-columns: 45.5% 45.5%;
+        gap: 2rem;
+    }
+
+    .card-info {
+        padding: 1rem 1rem 2rem;
+    }
+
+    /*detailed*/
+
+    .btn-section button {
+        width: 20%;
+        border-radius: .1rem;
+    }
+
+    .details-section {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .country-flag {
+        width: 100%;
+        height: auto;
+    }
+
+    .country-flag img {
+        width: 100%;
+    }
+
+    .country-info {
+        row-gap: 1.4rem;
+        width: 100%;
+    }
+
+    .country-info h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .details {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .details .main-details {
+        width: 100%;
+    }
+
+    .country-info p {
+        margin-bottom: .6rem;
+        font-size: 15px;
+    }
+
+    .country-info span {
+        font-size: 14px;
+    }
+
+    .country-info .border-countries {
+        row-gap: .5rem;
+    }
+
+    .country-info .border-countries p {
+        font-size: 15px;
+    }
+
+    .country-info .border-countries span {
+        font-size: 14px;
+        padding: .3rem .5rem;
+    }
+}
+
+@media(max-width: 410px) {
+    .header-nav h1 {
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .btn-section button {
+        width: 25%;
+    }
+
+    .header-nav .toggle-mode {
+        font-size: .8rem;
+    }
+
+    .header-nav .toggle-mode ion-icon {
+        font-size: 1rem;
+    }
+
+    .main-section {
+        grid-template-columns: 77%;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 335px) {
+    .btn-section button {
+        width: 27%;
+    }
+}
